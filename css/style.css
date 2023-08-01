@@ -57,29 +57,29 @@ input:-internal-autofill-selected {background:transparent !important;}
 
 
 
-body { width:100vw; height:100vh; min-height:100vh; background:url("../img/bg.png") no-repeat; background-size:cover; background-position: center 25%; overflow: hidden; }
-.loading { position:absolute; display:flex; left:0; top:0; justify-content: center; align-items: center; width:100vw; height:100vh; background:url("../img/bg.png") no-repeat; background-size:cover; background-position: center 50%; z-index:20;  }
+body { width:100vw; height:100vh; height:100dvh; min-height:100vh; background:url("../img/bg2.png") no-repeat; background-size:cover; background-position: center center; overflow: hidden; }
+.loading { position:absolute; display:flex; left:0; top:0; justify-content: center; align-items: center; width:100vw; height:100vh; height:100dvh; background:url("../img/bg2.png") no-repeat; background-position: center center; background-size:200%; z-index:20;  }
 body.off .loading { animation:loadAni1 0.8s 1s forwards; overflow: hidden; }
 .loading p { color: #FFF; font-family: Montserrat;font-size: 4.4rem;font-style: normal; font-weight: 200; line-height: normal; text-align:left; }
 body.off .loading p { animation:loadAni2 0.8s 1s forwards; }
 @keyframes loadAni1 {
-    0% { background-position: center 50%; opacity:1; }
+    0% { background-size:200%; opacity:1; }
     99%{ opacity: 1; }
-    100% { background-position: center 25%; opacity:0; pointer-events: none; }
+    100% { background-size:100%; opacity:0; pointer-events: none; }
 }
 @keyframes loadAni2 {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
 
-header { opacity:0; position:fixed; display:flex; justify-content: space-between; padding:2.4rem; left:50%; top:0; transform: translateX(-50%); width:100%; max-width:1920px; z-index: 10; }
 
 #wrap { width:100%; height:100%; max-width:1920px; margin:0 auto; border-left:1px solid rgba(255,255,255,0.6); border-right:1px solid rgba(255,255,255,0.6); }
 
+header { opacity:0; position:fixed; display:flex; justify-content: space-between; padding:2rem 2.4rem; left:50%; top:0; transform: translateX(-50%); width:100%; max-width:1920px; z-index: 10; }
 body.off header { animation:loadAni3 0.5s 1.8s forwards; }
-header h1 { color: #FFF; font-family: Montserrat;font-size: 4rem;font-style: normal; font-weight: 300; line-height: normal; text-align:left; }
-header ul { display:flex; gap:4rem; }
-header ul li a { color: #fff !important; text-align: right; font-family: Montserrat; font-size: 3.2rem; font-style: normal; font-weight: 300; line-height: normal; }
+header h1 { color: #FFF; font-family: Montserrat;font-size: 2.8rem;font-style: normal; font-weight: 300; line-height: normal; text-align:left; }
+header ul { display:flex; gap:2rem; }
+header ul li a { color: #fff !important; text-align: right; font-family: Montserrat; font-size: 2.4rem; font-style: normal; font-weight: 300; line-height: normal; }
 
 main { opacity:0; width:100%; height:100%; position: relative; overflow: hidden; }
 body.off main { animation:loadAni3 0.5s 1.8s forwards; }
@@ -87,10 +87,12 @@ body.off main { animation:loadAni3 0.5s 1.8s forwards; }
     0% { opacity:0; }
     100% { opacity:1; }
 }
-.main_card { position:absolute; width:26vw; max-width:49.2rem; height:auto; left:50%; top:50%; border-radius:1rem; box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.40); transform: translate(-50%, -50%); z-index:2; cursor: pointer; transition: transform 0.3s; }
-.main_card:hover { transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
+.main_card { position:absolute; width:26vw; max-width:49.2rem; height:auto; left:50%; top:50%; border-radius:1rem; box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.40); transform: translate(-50%, -50%) scale(1.05) rotate(3deg); z-index:2; cursor: pointer; transition: transform 0.3s; }
+.main_card:hover { transform: translate(-50%, -50%); }
 .main_card img { width:100%; height:auto; }
-.bg_line { position:absolute; width:100%; height:auto; left:50%; top:50%; transform: translate(-50%, -50%); z-index:1; }
+.comingSoon { opacity:0; position:absolute;top:28%; left:50%; transform: translateX(-50%); width:80% !important; transition: opacity 0.3s; }
+.main_card:hover .comingSoon { opacity:0.9; }
+.bg_line { position:absolute; width:100%; height:auto; left:50%; top:50%; transform: translate(-50%, -50%); z-index:1; opacity:0.7; }
 
 @media screen and (max-width:1920px) {
     #wrap { border-left:0px; border-right:0px; }
