@@ -106,4 +106,5 @@ body.off main { animation:loadAni3 0.5s 1.8s forwards; }
 @media screen and (max-width:700px) {
     html { font-size: 40%; }
     .main_card { width:60vw; max-width:70vw; }
+    .comingSoon { opacity:0.9; }
 }
