@@ -58,18 +58,18 @@ input:-internal-autofill-selected {background:transparent !important;}
 
 
 body { width:100vw; height:100vh; height:100dvh; min-height:100vh; background:url("../img/bg2.png") no-repeat; background-size:cover; background-position: center center; overflow: hidden; }
-.loading { position:absolute; display:flex; left:0; top:0; justify-content: center; align-items: center; width:100vw; height:100vh; height:100dvh; background:url("../img/bg2.png") no-repeat; background-position: center center; background-size:200%; z-index:20;  }
+.loading { position:absolute; display:flex; left:0; top:0; justify-content: center; align-items: center; width:100vw; height:100vh; height:100dvh; min-height:100vh; background:url("../img/bg2.png") no-repeat; background-position: center center; background-size:cover; z-index:20;  }
 body.off .loading { animation:loadAni1 0.8s 1s forwards; overflow: hidden; }
 .loading p { color: #FFF; font-family: Montserrat;font-size: 4.4rem;font-style: normal; font-weight: 200; line-height: normal; text-align:left; }
 body.off .loading p { animation:loadAni2 0.8s 1s forwards; }
 @keyframes loadAni1 {
-    0% { background-size:200%; opacity:1; }
+    0% { opacity:1; }
     99%{ opacity: 1; }
-    100% { background-size:100%; opacity:0; pointer-events: none; }
+    100% { opacity:0; pointer-events: none; }
 }
 @keyframes loadAni2 {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2); }
 }
 
 
